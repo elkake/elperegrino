@@ -1,0 +1,32 @@
+:root {
+  --verde-target: #1b934f;
+  --green: #6bcb77;
+  --red: #ff6b6b;
+  --yellow: #ffd93d;
+  --blue: #4d96ff;
+  --black:#010101;
+  --white: #ffffff;
+  --d-green: #36ae7c;
+  --d-red: #eb5353;
+  --d-yellow: #f9d923;
+  --d-blue: #187498;
+
+  --font-anton: 'Anton', sans-serif;
+  --font-bebas: 'Bebas Neue', cursive;
+  --font-henry: 'Henny Penny', cursive;
+  --font-monoton: 'Monoton', cursive;
+  --font-sans: 'Open Sans', sans-serif;
+  --font-quick: 'Quicksand', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-roboto);
+}
+
+body{
+  position: relative;
+}

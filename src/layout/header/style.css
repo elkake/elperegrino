@@ -1,0 +1,46 @@
+.header_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.header_image-section {
+  position: absolute;
+  top: 0;
+  transform: translateX(-45%);
+}
+
+.header_container > div:nth-child(1) {
+  position: static;
+  transform: translateX(-65%);
+  animation: nuves 40s linear;
+}
+
+@keyframes nuves {
+  0% {
+    transform: translateX(0%);
+  }
+}
+.header_container > div:nth-child(2) {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 10px;
+}
+.header_container > div:nth-child(2) img {
+  width: 80%;
+}
+.header_container > div:nth-child(3) {
+  z-index: 2;
+}
+.header_container > div:nth-child(4) {
+  z-index: 4;
+  transform: translateX(-45%) translateY(4px);
+}
+
+/* image tamaño */
+.header_image-section img {
+  width: 180%;
+}
+
