@@ -23,14 +23,14 @@ function Main() {
       </section>
       <section className="main_section pro_section">
         <div className="filtro">
-          <Link to={'/nosotros'} className="section_title">
+          <Link to={'/productos'} className="section_title">
             PRODUCTOS
           </Link>
         </div>
       </section>
       <section className="main_section rec_section">
         <div className="filtro">
-          <Link to={'/nosotros'} className="section_title">
+          <Link to={'/recetas'} className="section_title">
             RECETAS
           </Link>
         </div>

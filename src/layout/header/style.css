@@ -16,6 +16,7 @@
   animation: nuves 40s linear;
 }
 
+
 @keyframes nuves {
   0% {
     transform: translateX(0%);
@@ -29,7 +30,8 @@
   padding-top: 10px;
 }
 .header_container > div:nth-child(2) img {
-  width: 80%;
+  width: 50%;
+  transform: translateX(30%) translateY(-12px);
 }
 .header_container > div:nth-child(3) {
   z-index: 2;
@@ -44,3 +46,6 @@
   width: 180%;
 }
 
+/* .header_container > div:nth-child(1) img {
+  width: 160%;
+} */

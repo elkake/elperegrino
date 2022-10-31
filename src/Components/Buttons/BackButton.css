@@ -1,0 +1,50 @@
+.back_button {
+  position: fixed;
+  z-index: 90;
+  background-color: var(--d-green);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid var(--d-yellow);
+  bottom: 8px;
+  left: 8px;
+  box-shadow: 0 1px 8px var(--black);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2rem;
+  animation: bannerback 1s linear;
+}
+
+.back_button::after,
+.back_button::before {
+  content: '';
+  position: absolute;
+  /* width: 0px; */
+  border-top: 8px solid orange;
+  border-right: 4px solid orange;
+  border-bottom: 8px solid var(--d-yellow);
+  border-left: 4px solid var(--d-yellow);
+}
+
+.back_button::after {
+  bottom: -18px;
+  z-index: -1;
+}
+
+.back_button::before {
+  top: 10px;
+  left: -14px;
+  transform: rotate(90deg);
+}
+
+@keyframes bannerback {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

@@ -1,8 +1,12 @@
-.pro_container{
-    
-        background-image: url(../../imgs/body/aver.svg);
-        height: 100vh;
-        background-size: 90%;
-      background-position: center;
-    
+.pro_container {
+  background-image: url(../../imgs/body/aver.svg);
+  height: 100vh;
+  background-size: 90%;
+  background-position: center;
+}
+
+.pro_card-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }

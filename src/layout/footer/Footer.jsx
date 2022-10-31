@@ -6,7 +6,7 @@ import { MdOutlineSettingsCell } from 'react-icons/md'
 import Contact from '../../Components/FooterButton/Contact'
 function Footer() {
   return (
-    <div id='footer' className="footer_container">
+    <div id="footer" className="footer_container">
       <section className="footer_first-section">
         <a
           href="https://www.google.com/maps/place/INDUSTRIA+AVICOLA+EL+PEREGRINO+S.R.L./@-38.6987397,-62.288596,19z/data=!4m5!3m4!1s0x0:0x74623653604c5da5!8m2!3d-38.6985794!4d-62.2886808"
@@ -27,8 +27,8 @@ function Footer() {
             ico={<BiPhoneCall />}
           />
           <Contact
-            href={'tel:+540291155045508'}
-            content={'CELL: 0291 - 155045508'}
+            href={'tel:+5402915045508'}
+            content={'CELL: 291 - 5045508'}
             ico={<MdOutlineSettingsCell />}
           />
           <Contact

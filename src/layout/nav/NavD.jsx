@@ -6,6 +6,7 @@ import { RiCloseLine } from 'react-icons/ri'
 import { useGlobalContext } from '../../Context/GlobalContext'
 import gallo from '../../imgs/nav/elPeregrinoLogoVacio.png'
 import { Link } from 'react-scroll'
+import { Link as Ir } from 'react-router-dom'
 import { GiRoastChicken as Productos } from 'react-icons/gi'
 import {
   MdFamilyRestroom as Nosotros,
@@ -30,7 +31,9 @@ function NavD() {
   return (
     <div>
       <div className="banner_container">
-        <h1 className="header_title">EL PEREGRINO</h1>
+        <Ir to={'/home'} className="header_title">
+          EL PEREGRINO
+        </Ir>
       </div>
       <div className="menu_button" onClick={handleModal}>
         {navVisible ? <RiCloseLine /> : <TiThMenu />}
@@ -52,15 +55,23 @@ function NavD() {
               >
                 INICIO <Inicio className="nav_ico" />
               </Link>
-              <a href="" onClick={closeMenu} className="nav_menu-item">
+              <Ir
+                to={'/nosotros'}
+                onClick={closeMenu}
+                className="nav_menu-item"
+              >
                 NOSOTROS <Nosotros className="nav_ico" />
-              </a>
-              <a href="" onClick={closeMenu} className="nav_menu-item">
+              </Ir>
+              <Ir
+                to={'/productos'}
+                onClick={closeMenu}
+                className="nav_menu-item"
+              >
                 PRODUCTOS <Productos className="nav_ico" />
-              </a>
-              <a href="" onClick={closeMenu} className="nav_menu-item">
+              </Ir>
+              <Ir to={'/recetas'} onClick={closeMenu} className="nav_menu-item">
                 RECETAS <Recetas className="nav_ico" />
-              </a>
+              </Ir>
               <Link
                 onClick={closeMenu}
                 to="footer"
@@ -74,7 +85,7 @@ function NavD() {
             </div>
             <div className="nav_footer-section">
               <Telefono className="nav_ico" />
-              <a href="tel:+540291155045508">0291 - 155045508</a>
+              <a href="tel:+5402915045508">291 - 5045508</a>
             </div>
           </div>
         </section>

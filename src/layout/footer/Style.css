@@ -41,6 +41,7 @@
   text-shadow: 0 0 1px var(--red);
   background-color: var(--d-yellow);
   width: 100%;
+  max-width: 400px;
   border-radius: 0 0 8px 8px;
 }
 
@@ -51,6 +52,7 @@
 .footer_location-data {
   margin-top: 1rem;
   width: 90%;
+  max-width: 600px;
 }
 .footer_location-data h2 {
   text-align: center;

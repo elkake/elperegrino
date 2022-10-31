@@ -5,6 +5,7 @@
 .title_main-container {
   background-color: var(--d-green);
   padding-bottom: 12px;
+  padding-top:12px ;
   margin-bottom: 1rem;
   box-shadow: 0 0 5px var(--black);
 }
@@ -66,7 +67,7 @@
   box-shadow: inset 0 0 32px var(--black);
   /* background-position: cover; */
   background-position: 60%;
-  background-size: 150%;
+  background-size: 120%;
 }
 
 .filtro {

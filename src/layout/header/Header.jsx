@@ -1,21 +1,21 @@
 import React from 'react'
 import img1 from '../../imgs/header/farm1.svg'
 import img2 from '../../imgs/header/farm2.svg'
-import img3 from '../../imgs/header/farm3.svg'
+import img3 from '../../imgs/logo.svg'
 import img4 from '../../imgs/header/farm4.svg'
 import './style.css'
 import { useParallax } from 'react-scroll-parallax'
 import { TiThMenu } from 'react-icons/ti'
 function Header() {
   const parallax = useParallax({
-    startScroll: -350,
-    endScroll: 350,
+    startScroll: -250,
+    endScroll: 250,
     speed: -5
   })
 
   const parallaxTwo = useParallax({
-    startScroll: -250,
-    endScroll: 200,
+    startScroll: -270,
+    endScroll: 250,
     speed: -10
   })
 
