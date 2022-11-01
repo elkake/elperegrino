@@ -1,41 +1,85 @@
-.pr_title-float-container {
-  background-color: var(--d-green);
-  height: 45px;
-  width: 200px;
-  position: fixed;
-  margin-left: 0.5rem;
-  border: 2px solid var(--d-yellow);
-  border-radius: 4px;
-  box-shadow: 0 0 8px var(--black);
-  z-index: 100;
-  bottom: 8px;
-  left: calc(50% - 100px);
+.prcard_container {
+  box-shadow: 3px 1px 8px #888;
+  border-radius: 8px;
+  background-color: #8881;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  animation: moverpr 1s ease;
+  transform-origin: top;
+}
+
+@keyframes moverpr {
+  0% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.prcard_item {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.pr_title-float-container::after,
-.pr_title-float-container::before {
-  content: '';
-  position: absolute;
-  /* width: 0px; */
-  border-top: 8px solid orange;
-  border-right: 4px solid orange;
-  border-bottom: 8px solid var(--d-yellow);
-  border-left: 4px solid var(--d-yellow);
+.prcard_item img {
+  width: 100%;
+  filter: drop-shadow(3px 3px 4px #3339);
 }
 
-.pr_title-float-container::after {
-  bottom: -18px;
-  left: 1rem;
-}
-
-.pr_title-float-container::before {
-  bottom: -18px;
-  right: 1rem;
-}
-
-.pr_title-float-container h2 {
+.prcard_tittle {
+  background-color: var(--d-green);
+  border-radius: 0 0 8px 8px;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 100%;
   color: var(--white);
+  text-shadow: 0 0 1px var(--black);
+  box-shadow: 1px 1px 5px #0008;
+  padding: 8px 4px;
+}
+
+.prcard_holes {
+  background-color: var(--d-green);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  margin: auto;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5px 0.5px 3px var(--black);
+}
+
+.prcard_holes::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  background-color: var(--d-yellow);
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px var(--black);
 }

@@ -1,6 +1,6 @@
 .nos_container {
   background-image: url(../../imgs/body/aver.svg);
-
+  background-attachment: fixed;
   background-size: 90%;
   background-position: center;
 }

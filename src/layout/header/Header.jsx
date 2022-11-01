@@ -33,6 +33,7 @@ function Header() {
       <div className="header_image-section">
         <img src={img1} alt="granja el peregrino" />
       </div>
+      <div id="main"></div>
     </div>
   )
 }

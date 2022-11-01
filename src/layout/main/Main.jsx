@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
-import { Link } from 'react-router-dom'
+import { Link as Ir } from 'react-router-dom'
+import { Link } from 'react-scroll'
 function Main() {
   return (
     <div className="main_container">
@@ -16,22 +17,40 @@ function Main() {
 
       <section className="main_section nos_section">
         <div className="filtro">
-          <Link to={'/nosotros'} className="section_title">
-            NOSOTROS
+          <Link
+            to="main"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            className="section_title"
+          >
+            <Ir to={'/nosotros'}>NOSOTROS</Ir>
           </Link>
         </div>
       </section>
       <section className="main_section pro_section">
         <div className="filtro">
-          <Link to={'/productos'} className="section_title">
-            PRODUCTOS
+          <Link
+            to="main"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            className="section_title"
+          >
+            <Ir to={'/productos'}>PRODUCTOS</Ir>
           </Link>
         </div>
       </section>
       <section className="main_section rec_section">
         <div className="filtro">
-          <Link to={'/recetas'} className="section_title">
-            RECETAS
+          <Link
+            to="main"
+            smooth={true}
+            spy={true}
+            duration={1000}
+            className="section_title"
+          >
+            <Ir to={'/recetas'}>RECETAS</Ir>
           </Link>
         </div>
       </section>
