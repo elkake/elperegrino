@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './style.css'
 import ReactDOM from 'react-dom'
 import { TiThMenu } from 'react-icons/ti'
 import { RiCloseLine } from 'react-icons/ri'
-import { useGlobalContext } from '../../Context/GlobalContext'
+
 import gallo from '../../imgs/nav/elPeregrinoLogoVacio.png'
 import { Link } from 'react-scroll'
 import { Link as Ir } from 'react-router-dom'
@@ -17,9 +17,13 @@ import {
   GiRiceCooker as Recetas,
   GiRotaryPhone as Telefono
 } from 'react-icons/gi'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function NavD() {
-  const { navVisible, setNavVisible } = useGlobalContext()
+  const [navVisible, setNavVisible] = useState(false)
+
+  const goto = useNavigate()
+  const { pathname } = useLocation()
 
   const handleModal = () => {
     setNavVisible(!navVisible)
@@ -28,13 +32,25 @@ function NavD() {
   const closeMenu = () => {
     setNavVisible(false)
   }
+
+  const goToHome = () => {
+    if (pathname != '/home') {
+      goto('/home')
+    }
+  }
+
   return (
     <div>
-      <div className="banner_container">
-        <Ir to={'/home'} className="header_title">
-          EL PEREGRINO
-        </Ir>
-      </div>
+      <Link
+        to="header"
+        smooth="true"
+        
+        duration={1000}
+        className="banner_container"
+        onClick={goToHome}
+      >
+        <div className="header_title">EL PEREGRINO</div>
+      </Link>
       <div className="menu_button" onClick={handleModal}>
         {navVisible ? <RiCloseLine /> : <TiThMenu />}
       </div>

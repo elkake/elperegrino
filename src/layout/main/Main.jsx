@@ -1,8 +1,10 @@
 import React from 'react'
 import './style.css'
-import { Link as Ir } from 'react-router-dom'
+import { Link as Ir, useNavigate } from 'react-router-dom'
 import { Link } from 'react-scroll'
 function Main() {
+  const navegar = useNavigate()
+
   return (
     <div className="main_container">
       <section className="title_main-container">
@@ -21,10 +23,11 @@ function Main() {
             to="main"
             smooth={true}
             spy={true}
-            duration={1000}
+            duration={500}
             className="section_title"
+            onClick={() => navegar('/nosotros')}
           >
-            <Ir to={'/nosotros'}>NOSOTROS</Ir>
+            NOSOTROS
           </Link>
         </div>
       </section>
@@ -34,10 +37,11 @@ function Main() {
             to="main"
             smooth={true}
             spy={true}
-            duration={1000}
+            duration={500}
             className="section_title"
+            onClick={() => navegar('/productos')}
           >
-            <Ir to={'/productos'}>PRODUCTOS</Ir>
+            PRODUCTOS
           </Link>
         </div>
       </section>
@@ -47,10 +51,11 @@ function Main() {
             to="main"
             smooth={true}
             spy={true}
-            duration={1000}
+            duration={500}
             className="section_title"
+            onClick={() => navegar('/recetas')}
           >
-            <Ir to={'/recetas'}>RECETAS</Ir>
+            RECETAS
           </Link>
         </div>
       </section>

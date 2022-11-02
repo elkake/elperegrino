@@ -8,14 +8,10 @@ export function useGlobalContext() {
 }
 
 export function GlobalContext({ children }) {
-  
-
-  const [navVisible, setNavVisible] = useState(false)
+  const [receta, setReceta] = useState({ id: 50, clase: 'active_color' })
 
   return (
-    <Context.Provider
-      value={{ navVisible, setNavVisible }}
-    >
+    <Context.Provider value={{ receta, setReceta }}>
       {children}
     </Context.Provider>
   )

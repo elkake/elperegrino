@@ -1,0 +1,34 @@
+.pro_container {
+    background-image: url(../../imgs/body/aver.svg);
+  
+    background-size: 120%;
+    background-position: center;
+  }
+  
+  .pro_card-section {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-rows: repeat(auto-fill, 240px);
+    grid-auto-rows: 240px;
+    overflow: hidden;
+    animation: praparecer 0.5s ease-in-out;
+  }
+  
+  @keyframes praparecer {
+    from {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .pro_card-group-tittle {
+    background-color: var(--d-green);
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 0 8px var(--black);
+    text-shadow: 0 0 1px var(--black);
+  }
+  

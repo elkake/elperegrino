@@ -5,7 +5,7 @@ import img3 from '../../imgs/logo.svg'
 import img4 from '../../imgs/header/farm4.svg'
 import './style.css'
 import { useParallax } from 'react-scroll-parallax'
-import { TiThMenu } from 'react-icons/ti'
+
 function Header() {
   const parallax = useParallax({
     startScroll: -250,

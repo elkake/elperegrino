@@ -9,6 +9,7 @@ import NavD from './layout/nav/NavD'
 import Nosotros from './page/nosotros/Nosotros'
 import Productos from './page/productos/Productos'
 import Recetas from './page/recetas/Recetas'
+
 function App() {
   return (
     <GlobalContext>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/recetas" element={<Recetas />} />
+        <Route path="/recetas/:platillo" element={<Recetas />} />
       </Routes>
       <Footer />
     </GlobalContext>
