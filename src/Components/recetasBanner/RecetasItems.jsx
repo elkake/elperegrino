@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './RecetasItems.css'
-
+import NavLinkRecetas from './NavLinkRecetas'
 const recurso =
   'https://media.istockphoto.com/vectors/pizza-icon-vector-id166757566?s=612x612'
 
@@ -11,20 +10,16 @@ function RecetasBanner({
   short_description = 'Pizza de champiñones con queso y tomates sobre una masa blanda',
   alt = 'pizza'
 } = {}) {
-  
   return (
-    <div className="rec_item-container">
-      <section className="rec_item-img">
+    <NavLinkRecetas to={`/recetas/${alt}`} className="rec_item-container">
+      <div className="rec_item-img">
         <img src={short_img} alt={alt} />
-      </section>
+      </div>
       <section className="rec_item-description">
-        <Link to={`/recetas/${alt}`} className="rec_item-desciption-h3">
-          {short_tittle}
-        </Link>
+        <h3 className="rec_item-desciption-h3">{short_tittle}</h3>
         <p className="rec_item-desciption-p">{short_description}</p>
       </section>
-      
-    </div>
+    </NavLinkRecetas>
   )
 }
 

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import getPrescription from '../data/getPrescription'
 
-function getInfoReceta({ param }) {
-  const [data, setData] = useState([])
-
-  const [loading, setLoading] = useState(true)
+function getInfoReceta({ param = 'pizza' } = {}) {
+  const [data, setData] = useState(getPrescription[0])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true)

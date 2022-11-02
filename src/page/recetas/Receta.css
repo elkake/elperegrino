@@ -5,7 +5,22 @@
   background-position: center;
 }
 
+.rec_principal-tittle {
+  color: var(--white);
+  background-color: var(--d-green);
+  padding: 0.5rem 0;
+  text-align: center;
+  text-shadow: 0 0 2px var(--black);
+  box-shadow: 0 0 4px var(--black);
+}
+
 .rec_reel-container {
+  
+  margin-top: 1rem;
   display: flex;
+  height: 180px;
   overflow-x: scroll;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
 }

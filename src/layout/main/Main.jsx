@@ -53,7 +53,7 @@ function Main() {
             spy={true}
             duration={500}
             className="section_title"
-            onClick={() => navegar('/recetas')}
+            onClick={() => navegar('/recetas/pizza')}
           >
             RECETAS
           </Link>
